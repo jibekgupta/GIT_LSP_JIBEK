@@ -9,17 +9,17 @@ public class IntegerRange implements Range {
         this.endPoint = endPoint;
     }
 
-    @Override
+    
     public boolean contains(int value) {
         return value >= startPoint && value <= endPoint;
     }
 
-    @Override
+    
     public boolean overlaps(Range other) {
         return !(endPoint < other.getStartPoint() || startPoint > other.getEndPoint());
     }
 
-    @Override
+    
     public int size() {
         return endPoint - startPoint + 1;
     }
@@ -32,7 +32,7 @@ public class IntegerRange implements Range {
         return endPoint;
     }
 
-    @Override
+    
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
