@@ -146,6 +146,7 @@ public class IntegerSet {
         unionSet.add(element);
       }
     }
+    
     return unionSet;
   }
 
@@ -162,6 +163,7 @@ public class IntegerSet {
         intersectSet.add(element);
       }
     }
+    
     return intersectSet;
   }
 
@@ -178,8 +180,27 @@ public class IntegerSet {
         diffSet.add(element);
       }
     }
+    
     return diffSet;
   }
+  
+  /**
+   * Finds the complement of this set with another set.
+   *
+   * @param otherSet the other set
+   * @return complementSet, the complement of two Sets
+   */
+  public IntegerSet complement() {
+	  IntegerSet complementSet = new IntegerSet();
+	  for (int i=0; i <=100; i++) {
+		  if (!this.contains(i)) {
+			  complementSet.add(i);
+		  }
+	  }
+	  
+	  return complementSet;
+  }
+  
 
   /**
    * Returns a string representation of the set.
